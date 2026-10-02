@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from collections.abc import Callable
 from dataclasses import dataclass, field
 from nicegui import ui
 

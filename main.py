@@ -8,7 +8,6 @@ import shopping_list
 import recipe
 import meal_plan
 import add_recipe
-import store
 from data_model import *
 
 

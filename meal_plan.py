@@ -13,7 +13,8 @@ def meal_plan_ui(plan: MealPlan, shopping: ShoppingList):
             ui.label('No recipes')
             return
         with ui.scroll_area().classes('h-120'):
-            with ui.grid(columns=2):
+            grid_style = 'repeat(auto-fill, minmax(220px, 1fr))'
+            with ui.grid(columns=grid_style).classes('w-full'):
                 for id, item in plan.recipes.items():
                     recipe.recipe_card(plan, shopping, id, item, True)
 

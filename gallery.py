@@ -13,7 +13,8 @@ def render_page(plan: MealPlan, shopping: ShoppingList) -> None:
         with ui.card(align_items='stretch').classes('w-full h-160'):
             ui.label('Recipes').classes('text-semibold text-2xl font-serif')
             with ui.scroll_area().classes('h-120'):
-                with ui.grid(columns=2):
+                grid_style = 'repeat(auto-fill, minmax(220px, 1fr))'
+                with ui.grid(columns=grid_style).classes('w-full'):
                     for id, recipe in recipes.items():
                         recipe_card(plan, shopping, id, recipe, False)
             with ui.link(target='/add_recipe'):

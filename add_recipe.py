@@ -31,7 +31,8 @@ def add_nyt(url: str) -> None:
 def render_page() -> None:
     @ui.page('/add_recipe')
     def meal_plan_page():
-        with ui.card(align_items='stretch').classes('w-150'):
+        ui.page_title('mealapp')
+        with ui.card(align_items='stretch').classes('w-full'):
             ui.label('Add Recipe').classes('text-semibold text-2xl font-serif')
             with ui.tabs().classes('w-full') as tabs:
                 form = ui.tab('Form')

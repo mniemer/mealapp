@@ -23,7 +23,9 @@ def render_page() -> None:
         recipe = store.get_recipe(id)
         ui.page_title('mealapp')
         with ui.card(align_items='stretch').classes('w-full h-160'):
-            ui.label(recipe.name).classes('text-semibold text-2xl font-serif')
+            with ui.grid(columns='1fr 2fr'):
+                ui.image(recipe.img_url)
+                ui.label(recipe.name).classes('text-semibold text-2xl font-serif')
             with ui.tabs().classes('w-full').props('align=left') as tabs:
                 ingredients = ui.tab('Ingredients')
                 steps = ui.tab('Steps')

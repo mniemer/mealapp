@@ -31,7 +31,8 @@ def shopping_ui(shopping_list: ShoppingList):
 def render_page(shopping_list: ShoppingList) -> None:
     @ui.page('/shopping_list')
     def shopping_list_page():
-        with ui.card(align_items='stretch').classes('w-150 h-160'):
+        ui.page_title('mealapp')
+        with ui.card(align_items='stretch').classes('w-full h-160'):
             ui.label('Shopping list').classes('text-semibold text-2xl font-serif')
             shopping_ui(shopping_list)
             with ui.row(align_items='center'):

@@ -32,4 +32,4 @@ recipe.render_page()
 shopping_list.render_page(shopping)
 add_recipe.render_page()
 
-ui.run()
+ui.run(favicon='🥑')

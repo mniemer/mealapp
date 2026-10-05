@@ -9,7 +9,8 @@ def render_page(plan: MealPlan, shopping: ShoppingList) -> None:
     @ui.page('/recipes')
     def meal_plan_page():
         recipes = store.get_all_recipes()
-        with ui.card(align_items='stretch').classes('w-150 h-160'):
+        ui.page_title('mealapp')
+        with ui.card(align_items='stretch').classes('w-full h-160'):
             ui.label('Recipes').classes('text-semibold text-2xl font-serif')
             with ui.scroll_area().classes('h-120'):
                 with ui.grid(columns=2):

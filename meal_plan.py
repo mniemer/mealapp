@@ -6,7 +6,8 @@ import footer
 
 @ui.refreshable
 def meal_plan_ui(plan: MealPlan, shopping: ShoppingList):
-    with ui.card(align_items='stretch').classes('w-150 h-160'):
+    ui.page_title('mealapp')
+    with ui.card(align_items='stretch').classes('w-full h-160'):
         ui.label('Meal plan').classes('text-semibold text-2xl font-serif')
         if not plan.recipes:
             ui.label('No recipes')

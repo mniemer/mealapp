@@ -21,9 +21,10 @@ def render_page() -> None:
     @ui.page('/recipe/{id}')
     def recipe_page(id: str):
         recipe = store.get_recipe(id)
-        with ui.card(align_items='stretch').classes('w-150 h-160'):
+        ui.page_title('mealapp')
+        with ui.card(align_items='stretch').classes('w-full h-160'):
             ui.label(recipe.name).classes('text-semibold text-2xl font-serif')
-            with ui.tabs().classes('w-full') as tabs:
+            with ui.tabs().classes('w-full').props('align=left') as tabs:
                 ingredients = ui.tab('Ingredients')
                 steps = ui.tab('Steps')
             with ui.tab_panels(tabs, value=ingredients).classes('w-full'):
